@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/css/uikit.min.css" />
 
 	<!-- Заголовок вкладки -->
-	<title>Голосования - Создать</title>
+	<title>Новости - Создать</title>
 </head>
 
 <body>
@@ -18,9 +18,21 @@
 		<div class="container">
 			<!-- Логотип-ссылка на главную -->
 			<a class="navbar-brand" href="/">
+<<<<<<< HEAD
 				Новосталочка
 			</a>
 
+=======
+				<i class="fa fa-hand-paper-o" aria-hidden="true"></i> Новости
+			</a>
+
+			<!-- Навигация из 1 элемента "Открыть новости"  -->
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="/vote/create">Открыть новости</a>
+				</li>
+			</ul>
+>>>>>>> c8379256f6cfbb669fb0a142193c72ceb371d466
 		</div>
 	</nav>
 	<!-- КОНЕЦ: Навигация -->
@@ -33,7 +45,11 @@
 					<a href="/"><i class="fa fa-home" aria-hidden="true"></i> Главная</a>
 				</li>
 				<li class="breadcrumb-item active" aria-current="page">
+<<<<<<< HEAD
 					Написать новость
+=======
+					Открыть новость
+>>>>>>> c8379256f6cfbb669fb0a142193c72ceb371d466
 				</li>
 			</ol>
 		</div>
@@ -44,7 +60,11 @@
 	<main class="mt-5">
 		<div class="container">
 
+<<<<<<< HEAD
 			<h1>Расскажите миру что-то новое</h1>
+=======
+			<h1>Открыть новость</h1>
+>>>>>>> c8379256f6cfbb669fb0a142193c72ceb371d466
 			<hr class="mb-4">
 
 			<form method="POST">
@@ -80,7 +100,7 @@
 					<textarea class="form-control" rows="5" name="text"></textarea>
 				</div>
 				{{ csrf_field() }}
-				<button type="submit" class="btn btn-outline-success">Открыть голосование</button>
+				<button type="submit" class="btn btn-outline-success">Открыть новость</button>
 			</form>
 
 		</div>
