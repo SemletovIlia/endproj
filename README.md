@@ -1,4 +1,6 @@
 # endproj
-composer update
-php artisan serve
-npm run hot
+<ul>
+    <li>composer update</li>
+    <li>php artisan serve</li>
+    <li>npm run hot</li>
+</ul>
