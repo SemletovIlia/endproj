@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 	<!-- Заголовок вкладки -->
-	<title>Голосования - Создать</title>
+	<title>Новости - Создать</title>
 </head>
 
 <body>
@@ -16,13 +16,13 @@
 		<div class="container">
 			<!-- Логотип-ссылка на главную -->
 			<a class="navbar-brand" href="/">
-				<i class="fa fa-hand-paper-o" aria-hidden="true"></i> Голосования
+				<i class="fa fa-hand-paper-o" aria-hidden="true"></i> Новости
 			</a>
 
-			<!-- Навигация из 1 элемента "Открыть голосование"  -->
+			<!-- Навигация из 1 элемента "Открыть новости"  -->
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="/vote/create">Открыть голосование</a>
+					<a class="nav-link" href="/vote/create">Открыть новости</a>
 				</li>
 			</ul>
 		</div>
@@ -37,7 +37,7 @@
 					<a href="/"><i class="fa fa-home" aria-hidden="true"></i> Главная</a>
 				</li>
 				<li class="breadcrumb-item active" aria-current="page">
-					Открыть голосование
+					Открыть новость
 				</li>
 			</ol>
 		</div>
@@ -48,7 +48,7 @@
 	<main class="mt-5">
 		<div class="container">
 
-			<h1>Открыть голосование</h1>
+			<h1>Открыть новость</h1>
 			<hr class="mb-4">
 
 			<form method="POST">
@@ -61,7 +61,7 @@
 					<textarea class="form-control" rows="5" name="text"></textarea>
 				</div>
 				{{ csrf_field() }}
-				<button type="submit" class="btn btn-outline-success">Открыть голосование</button>
+				<button type="submit" class="btn btn-outline-success">Открыть новость</button>
 			</form>
 
 		</div>

@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 	<!-- Заголовок вкладки -->
-	<title>Голосования - Главная</title>
+	<title>Новости - Главная</title>
 </head>
 
 <body>
@@ -16,13 +16,13 @@
 		<div class="container">
 			<!-- Логотип-ссылка на главную -->
 			<a class="navbar-brand" href="/">
-				<i class="fa fa-hand-paper-o" aria-hidden="true"></i> Голосования
+				<i class="fa fa-hand-paper-o" aria-hidden="true"></i> Новости
 			</a>
 
-			<!-- Навигация из 1 элемента "Открыть голосование"  -->
+			<!-- Навигация из 1 элемента "Открыть Новости"  -->
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="/vote/create">Открыть голосование</a>
+					<a class="nav-link" href="/vote/create">Открыть новости</a>
 				</li>
 			</ul>
 		</div>
@@ -32,10 +32,10 @@
 	<!-- НАЧАЛО: Основное содержимое страницы -->
 	<main class="mt-5">
 		<div class="container">
-			<h1>Текущие голосования</h1>
+			<h1>Текущие новости</h1>
 			<hr class="mb-5">
 			
-			<!-- НАЧАЛО: Карточка голосования ------------------------------------->
+			<!-- НАЧАЛО: Карточка новости ------------------------------------->
 			@foreach ($votes as $vote)
 				<div class="card border-info mb-4">
 					<!-- НАЧАЛО: Шапка карточки -->
@@ -54,7 +54,7 @@
 						<p class="card-text mb-4">
 							{{ $vote->text }}
 						</p>
-						<!-- Кнопки голосования -->
+						<!-- Кнопки новости -->
 						<a href="/vote/positive_inc/{{ $vote->id }}" class="btn btn-outline-success mr-3">
 							<i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Я за!
 							<span class="badge badge-pill badge-success">
@@ -72,7 +72,7 @@
 					<!-- КОНЕЦ: Тело карточки -->
 				</div>
 			@endforeach
-			<!-- КОНЕЦ: Карточка голосования -------------------------------------->
+			<!-- КОНЕЦ: Карточка новости -------------------------------------->
 
 		</div>
 

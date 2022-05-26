@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 	<!-- Заголовок вкладки -->
-	<title>Голосование - Уточек программистам</title>
+	<title>Новости - Уточек программистам</title>
 </head>
 
 <body>
@@ -16,13 +16,13 @@
 		<div class="container">
 			<!-- Логотип-ссылка на главную -->
 			<a class="navbar-brand" href="/">
-				<i class="fa fa-hand-paper-o" aria-hidden="true"></i> Голосования
+				<i class="fa fa-hand-paper-o" aria-hidden="true"></i> Новости
 			</a>
 
-			<!-- Навигация из 1 элемента "Открыть голосование"  -->
+			<!-- Навигация из 1 элемента "Открыть новости"  -->
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="/vote/create">Открыть голосование</a>
+					<a class="nav-link" href="/vote/create">Открыть новости</a>
 				</li>
 			</ul>
 		</div>
