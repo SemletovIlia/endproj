@@ -16,6 +16,8 @@ use App\Http\Controllers\VoteController;
 
 Route::get('/', [VoteController::class, 'showAll']);
 
+
+
 Route::get('/vote/create', function() {
     return view('create_vote');
 });
