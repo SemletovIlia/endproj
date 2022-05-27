@@ -3,12 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vote;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
 class VoteController extends Controller
 {
+    public function registration(Request $request)
+    {
+        $user = new User;
+        $user->login = $request->login;
+        $user->password = $request->password;
+        $user->save();
+
+        return redirect('/home');
+    }
 
     public function showAll() {
         $votes = DB::table('votes')->paginate(5);
@@ -30,7 +40,7 @@ class VoteController extends Controller
         $vote->negtive = 0;
         $vote->save();
 
-        return redirect('/');
+        return redirect('/home');
     }
 
     public function increasePositive($id) {

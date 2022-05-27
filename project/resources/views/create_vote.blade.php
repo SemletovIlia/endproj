@@ -6,10 +6,9 @@
 	<!-- Стили -->
 	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/css/uikit.min.css" />
-
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/css/uikit.min.css" />
 	<!-- Заголовок вкладки -->
-	<title>Новости - Создать</title>
+	<title>Редактор</title>
 </head>
 
 <body>
@@ -18,11 +17,15 @@
 		<div class="container">
 			<!-- Логотип-ссылка на главную -->
 			<a class="navbar-brand" href="/">
-				Новосталочка
+				<i class="fa fa-hand-paper-o" aria-hidden="true"></i> Новости
 			</a>
 
-
-
+			<!-- Навигация из 1 элемента "Открыть голосование"  -->
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="/vote/create">Добавить новость</a>
+				</li>
+			</ul>
 		</div>
 	</nav>
 	<!-- КОНЕЦ: Навигация -->
@@ -35,7 +38,7 @@
 					<a href="/"><i class="fa fa-home" aria-hidden="true"></i> Главная</a>
 				</li>
 				<li class="breadcrumb-item active" aria-current="page">
-					Написать новость
+					Добавить новость
 				</li>
 			</ol>
 		</div>
@@ -46,43 +49,36 @@
 	<main class="mt-5">
 		<div class="container">
 
-			<h1>Расскажите миру что-то новое</h1>
+			<h1>Добавить новость</h1>
 			<hr class="mb-4">
-
+			
 			<form method="POST">
+				@csrf
                 <div class="uk-card uk-card-default uk-width-2-3@m" style="margin: 5% auto">
                     <div class="uk-card-header">
                         <div class="uk-grid-small uk-flex-middle" uk-grid>
                             <div class="uk-width-expand">
-								<label for="">Заголовок</label>
-								<br>
-                                    <input type="text"   placeholder="" class="uk-width-2-3" name="title">
+                                <div class="form-group">
+									<label for="">Заголовок</label>
+									<br>
+									<input type="text" class="form-control" name="title">
+								</div>
                             </div>
                         </div>
-						<br>
-						<br>
-						<label for="">Новость</label>
-						<br>
-					<textarea class="uk-width-1" rows="5" name="text"></textarea>
+            			<br>
+            			<br>
+						<div class="form-group">
+							<label for="">Новость</label>
+							<br>
+							<textarea class="form-control" rows="5" name="text"></textarea>
+						</div>
 
                     </div>
                     <div class="uk-card-footer uk-flex uk-flex-left">
-                        {{ csrf_field() }}
-                        <button type="submit" class="btn btn-outline-success">Опубликовать</button>
+                        
+                        <button type="submit" class="btn btn-outline-success" action="/vote/create">Опубликовать</button>
                     </div>
                 </div>
-
-
-				<div class="form-group">
-					<label>Заголовок</label>
-					<input type="text" class="form-control" name="title">
-				</div>
-				<div class="form-group">
-					<label>Текст описания</label>
-					<textarea class="form-control" rows="5" name="text"></textarea>
-				</div>
-				{{ csrf_field() }}
-				<button type="submit" class="btn btn-outline-success">Открыть новость</button>
 			</form>
 
 		</div>

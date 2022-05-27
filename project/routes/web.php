@@ -14,9 +14,13 @@ use App\Http\Controllers\VoteController;
 |
 */
 
-Route::get('/', [VoteController::class, 'showAll']);
+Route::get('/', function() {
+    return view('registration');
+});
 
+Route::post('/home', [VoteController::class, 'registration']);
 
+Route::get('/home', [VoteController::class, 'showAll']);
 
 Route::get('/vote/create', function() {
     return view('create_vote');
