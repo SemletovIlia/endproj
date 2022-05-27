@@ -16,7 +16,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<div class="container">
 			<!-- Логотип-ссылка на главную -->
-			<a class="navbar-brand" href="/">
+			<a class="navbar-brand" href="/home">
 				<i class="fa fa-hand-paper-o" aria-hidden="true"></i> Новости
 			</a>
 
