@@ -15,10 +15,10 @@ use App\Http\Controllers\VoteController;
 */
 
 Route::get('/', function() {
-    return view('registration');
+    return view('login');
 });
 
-Route::post('/home', [VoteController::class, 'registration']);
+Route::post('/', [VoteController::class, 'login']);
 
 Route::get('/home', [VoteController::class, 'showAll']);
 

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class VoteController extends Controller
 {
-    public function registration(Request $request)
+    public function login(Request $request)
     {
         $user = new User;
         $user->login = $request->login;
